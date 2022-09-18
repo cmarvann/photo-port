@@ -7,6 +7,7 @@ const {
    setCurrentCategory,
    currentCategory,
  } = props;
+ 
  useEffect(() => {
   document.title = capitalizeFirstLetter(currentCategory.name);
 }, [currentCategory]);
