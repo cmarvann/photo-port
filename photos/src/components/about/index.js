@@ -10,7 +10,6 @@ function About() {
 </section>
 
     
-
   );
 }
 
