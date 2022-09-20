@@ -1,4 +1,3 @@
-// __tests__/Modal.test.js with hard coded categories
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -38,6 +37,7 @@ describe('Click Event', () => {
       onClose={mockToggleModal}
       currentPhoto={currentPhoto}
     />);
+
     fireEvent.click(getByText('Close this modal'))
 
     expect(mockToggleModal).toHaveBeenCalledTimes(1);
