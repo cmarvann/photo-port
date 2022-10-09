@@ -24,5 +24,5 @@ it('renders', () => {
  
 it('renders', () => {
   const { getByTestId } = render(<Contact />)
-  expect(getByTestId('button')).toHaveTextContent('Submit')
+  expect( getByTestId('button')).toHaveTextContent('Submit')
 })

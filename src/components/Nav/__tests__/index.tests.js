@@ -15,6 +15,7 @@ const mockSetContactSelected = jest.fn();
 afterEach(cleanup);
 
 describe('Nav component', () => {
+  // baseline test
   it('renders', () => {
     render(<Nav 
       categories={categories}
@@ -26,6 +27,7 @@ describe('Nav component', () => {
     />);
   });
 
+      // snapshot test
   it('matches snapshot', () => {
     const { asFragment } = render(<Nav 
       categories={categories}
@@ -55,6 +57,7 @@ describe('emoji is visible', () => {
 
 describe('links are visible', () => {
   it('inserts text into the links', () => {
+        // Arrange
     const { getByTestId } = render(<Nav 
       categories={categories}
       setCurrentCategory={mockSetCurrentCategory}
@@ -62,7 +65,8 @@ describe('links are visible', () => {
       contactSelected={mockContactSelected}
       setContactSelected={mockSetContactSelected}
     />);
-
+      
+        // Assert
     expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
     expect(getByTestId('about')).toHaveTextContent('About me');
   });

@@ -21,3 +21,9 @@ const Modal = ({ onClose, currentPhoto }) => {
 };
 
 export default Modal;
+
+
+
+
+
+
